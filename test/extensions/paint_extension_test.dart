@@ -1,4 +1,4 @@
-import 'package:fl_chart/src/extensions/paint_extension.dart';
+import 'package:fl_chart_custom/src/extensions/paint_extension.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 

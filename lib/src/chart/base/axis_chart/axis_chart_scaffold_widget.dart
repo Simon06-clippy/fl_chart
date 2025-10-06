@@ -1,9 +1,9 @@
-import 'package:fl_chart/src/chart/base/axis_chart/axis_chart_data.dart';
-import 'package:fl_chart/src/chart/base/axis_chart/scale_axis.dart';
-import 'package:fl_chart/src/chart/base/axis_chart/side_titles/side_titles_widget.dart';
-import 'package:fl_chart/src/chart/base/axis_chart/transformation_config.dart';
-import 'package:fl_chart/src/chart/base/custom_interactive_viewer.dart';
-import 'package:fl_chart/src/extensions/fl_titles_data_extension.dart';
+import 'package:fl_chart_custom/src/chart/base/axis_chart/axis_chart_data.dart';
+import 'package:fl_chart_custom/src/chart/base/axis_chart/scale_axis.dart';
+import 'package:fl_chart_custom/src/chart/base/axis_chart/side_titles/side_titles_widget.dart';
+import 'package:fl_chart_custom/src/chart/base/axis_chart/transformation_config.dart';
+import 'package:fl_chart_custom/src/chart/base/custom_interactive_viewer.dart';
+import 'package:fl_chart_custom/src/extensions/fl_titles_data_extension.dart';
 import 'package:flutter/material.dart';
 
 /// A builder to build a chart.
@@ -214,8 +214,14 @@ class _AxisChartScaffoldWidgetState extends State<AxisChartScaffoldWidget> {
     final rect = Rect.fromLTRB(
       0,
       0,
-      constraints.maxWidth - titleMargin.horizontal - borderPadding.horizontal - borderWidth,
-      constraints.maxHeight - titleMargin.vertical - borderPadding.vertical - borderHeight,
+      constraints.maxWidth -
+          titleMargin.horizontal -
+          borderPadding.horizontal -
+          borderWidth,
+      constraints.maxHeight -
+          titleMargin.vertical -
+          borderPadding.vertical -
+          borderHeight,
     );
 
     final adjustedRect = _calculateAdjustedRect(rect);

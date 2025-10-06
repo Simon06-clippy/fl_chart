@@ -1,8 +1,8 @@
 import 'dart:ui';
 
-import 'package:fl_chart/fl_chart.dart';
-import 'package:fl_chart/src/extensions/path_extension.dart';
-import 'package:fl_chart/src/utils/utils.dart';
+import 'package:fl_chart_custom/fl_chart.dart';
+import 'package:fl_chart_custom/src/extensions/path_extension.dart';
+import 'package:fl_chart_custom/src/utils/utils.dart';
 import 'package:flutter/cupertino.dart' hide Image;
 
 typedef DrawCallback = void Function();

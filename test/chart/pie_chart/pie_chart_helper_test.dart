@@ -1,5 +1,5 @@
-import 'package:fl_chart/fl_chart.dart';
-import 'package:fl_chart/src/chart/pie_chart/pie_chart_helper.dart';
+import 'package:fl_chart_custom/fl_chart.dart';
+import 'package:fl_chart_custom/src/chart/pie_chart/pie_chart_helper.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_test/flutter_test.dart';
 
