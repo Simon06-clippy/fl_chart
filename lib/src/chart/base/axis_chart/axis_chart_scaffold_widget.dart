@@ -251,7 +251,11 @@ class _AxisChartScaffoldWidgetState extends State<AxisChartScaffoldWidget> {
     final widgets = <Widget>[
       Container(
         margin: margin,
-        decoration: BoxDecoration(border: borderData),
+        decoration: BoxDecoration(
+          border: borderData,
+          borderRadius: widget.data.borderData.borderRadius,
+        ),
+        clipBehavior: Clip.antiAlias,
         child: child,
       ),
     ];
