@@ -200,7 +200,8 @@ class _AxisChartScaffoldWidgetState extends State<AxisChartScaffoldWidget> {
   }
 
   List<Widget> _stackWidgets(BoxConstraints constraints) {
-    final margin = widget.data.titlesData.allSidesPadding;
+    final titleMargin = widget.data.titlesData.allSidesPadding;
+    final borderPadding = widget.data.borderData.padding;
     final borderData = widget.data.borderData.isVisible()
         ? widget.data.borderData.border
         : null;
@@ -213,8 +214,8 @@ class _AxisChartScaffoldWidgetState extends State<AxisChartScaffoldWidget> {
     final rect = Rect.fromLTRB(
       0,
       0,
-      constraints.maxWidth - margin.horizontal - borderWidth,
-      constraints.maxHeight - margin.vertical - borderHeight,
+      constraints.maxWidth - titleMargin.horizontal - borderPadding.horizontal - borderWidth,
+      constraints.maxHeight - titleMargin.vertical - borderPadding.vertical - borderHeight,
     );
 
     final adjustedRect = _calculateAdjustedRect(rect);
@@ -250,7 +251,8 @@ class _AxisChartScaffoldWidgetState extends State<AxisChartScaffoldWidget> {
 
     final widgets = <Widget>[
       Container(
-        margin: margin,
+        margin: titleMargin,
+        padding: borderPadding,
         decoration: BoxDecoration(
           border: borderData,
           borderRadius: widget.data.borderData.borderRadius,
