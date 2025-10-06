@@ -1,4 +1,4 @@
-import 'package:fl_chart_custom/fl_chart.dart';
+import 'package:fl_chart/fl_chart.dart';
 
 extension FlSpotListExtension on List<FlSpot> {
   /// Splits a line by [FlSpot.nullSpot] values inside it.

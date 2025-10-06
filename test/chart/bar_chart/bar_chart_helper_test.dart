@@ -1,5 +1,5 @@
-import 'package:fl_chart_custom/fl_chart.dart';
-import 'package:fl_chart_custom/src/chart/bar_chart/bar_chart_helper.dart';
+import 'package:fl_chart/fl_chart.dart';
+import 'package:fl_chart/src/chart/bar_chart/bar_chart_helper.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import '../data_pool.dart';

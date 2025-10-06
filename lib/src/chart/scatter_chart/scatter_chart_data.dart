@@ -2,10 +2,10 @@
 import 'dart:ui';
 
 import 'package:equatable/equatable.dart';
-import 'package:fl_chart_custom/fl_chart.dart';
-import 'package:fl_chart_custom/src/chart/scatter_chart/scatter_chart_helper.dart';
-import 'package:fl_chart_custom/src/extensions/color_extension.dart';
-import 'package:fl_chart_custom/src/utils/lerp.dart';
+import 'package:fl_chart/fl_chart.dart';
+import 'package:fl_chart/src/chart/scatter_chart/scatter_chart_helper.dart';
+import 'package:fl_chart/src/extensions/color_extension.dart';
+import 'package:fl_chart/src/utils/lerp.dart';
 import 'package:flutter/material.dart';
 
 /// [ScatterChart] needs this class to render itself.
