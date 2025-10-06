@@ -34,13 +34,21 @@ abstract class BaseChartData with EquatableMixin {
 class FlBorderData with EquatableMixin {
   /// [show] Determines showing or hiding border around the chart.
   /// [border] Determines the visual look of 4 borders, see [Border].
+  /// [padding] Determines the padding around the chart.
+  /// [borderRadius] Determines the border radius for rounded corners.
   FlBorderData({
     bool? show,
     Border? border,
+    EdgeInsets? padding,
+    BorderRadius? borderRadius,
   })  : show = show ?? true,
-        border = border ?? Border.all();
+        border = border ?? Border.all(),
+        padding = padding ?? EdgeInsets.zero,
+        borderRadius = borderRadius ?? BorderRadius.zero;
   final bool show;
   final Border border;
+  final EdgeInsets padding;
+  final BorderRadius borderRadius;
 
   /// returns false if all borders have 0 width or 0 opacity
   bool isVisible() => show && border.isVisible();
@@ -50,6 +58,8 @@ class FlBorderData with EquatableMixin {
       FlBorderData(
         show: b.show,
         border: Border.lerp(a.border, b.border, t),
+        padding: EdgeInsets.lerp(a.padding, b.padding, t),
+        borderRadius: BorderRadius.lerp(a.borderRadius, b.borderRadius, t),
       );
 
   /// Copies current [FlBorderData] to a new [FlBorderData],
@@ -57,10 +67,14 @@ class FlBorderData with EquatableMixin {
   FlBorderData copyWith({
     bool? show,
     Border? border,
+    EdgeInsets? padding,
+    BorderRadius? borderRadius,
   }) =>
       FlBorderData(
         show: show ?? this.show,
         border: border ?? this.border,
+        padding: padding ?? this.padding,
+        borderRadius: borderRadius ?? this.borderRadius,
       );
 
   /// Used for equality check, see [EquatableMixin].
@@ -68,6 +82,8 @@ class FlBorderData with EquatableMixin {
   List<Object?> get props => [
         show,
         border,
+        padding,
+        borderRadius,
       ];
 }
 
